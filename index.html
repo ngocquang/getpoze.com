@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>POZE — Pose guide camera for iPhone</title>
+  <meta name="description" content="POZE lays a reference pose over your viewfinder and shows, in real time, how closely your subject matches it. Ring turns green, you tap the shutter. Everything runs on the device.">
+  <meta name="theme-color" content="#0B0B0C">
+  <link rel="canonical" href="https://getpoze.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="POZE">
+  <meta property="og:title" content="POZE — Pose guide camera for iPhone">
+  <meta property="og:description" content="Pick a pose. Line them up. Green means go. A camera that tells you when the pose is right.">
+  <meta property="og:url" content="https://getpoze.com/">
+  <meta property="og:image" content="https://getpoze.com/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="spot" aria-hidden="true"></div>
+
+  <header class="nav" data-nav>
+    <a class="nav-brand" href="#top" aria-label="POZE home">
+      <span class="wordmark wordmark--sm"><span>P</span><span>O</span><svg class="zmark" viewBox="28.5 19 64.5 72.5" aria-hidden="true"><path class="zz" d="M34 44H80L40 86H86"/><circle class="zh" cx="84" cy="28" r="9"/></svg><span>E</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#packs">Packs</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn--sm btn--accent" href="#get" data-magnet>Get the app</a>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow reveal" style="--d:.1s"><span class="dot"></span>Pose guide camera for iPhone</p>
+        <h1 class="h1" aria-label="Direct the pose. Nail the shot.">
+          <span class="line"><span class="w" style="--i:0">Direct</span> <span class="w" style="--i:1">the</span> <span class="w" style="--i:2">pose.</span></span>
+          <span class="line"><span class="w w--accent" style="--i:3">Nail</span> <span class="w" style="--i:4">the</span> <span class="w" style="--i:5">shot.</span></span>
+        </h1>
+        <p class="lede reveal" style="--d:.55s">POZE lays a reference pose over your viewfinder and tells you, live, how close your subject is. The ring turns green. You tap the shutter. No retakes, no “just stand natural”.</p>
+        <div class="cta-row reveal" style="--d:.7s">
+          <a class="btn btn--accent btn--lg" href="#get" data-magnet>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 12.9c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.8 1.3 10.3.9 1.3 1.9 2.7 3.3 2.6 1.3-.1 1.8-.8 3.4-.8s2 .8 3.4.8c1.4 0 2.3-1.3 3.2-2.6 1-1.5 1.4-2.9 1.4-3-.1 0-2.9-1.1-3-4zM14 5.3c.7-.9 1.2-2.1 1.1-3.3-1 0-2.3.7-3 1.6-.7.8-1.3 2-1.1 3.2 1.1.1 2.3-.6 3-1.5z"/></svg>
+            Coming soon on the App Store
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#how">See how it works</a>
+        </div>
+        <ul class="stats reveal" style="--d:.9s" aria-label="Key facts">
+          <li><b data-count="100" data-suffix="%">0%</b><span>on-device</span></li>
+          <li><b data-count="19">0</b><span>joints tracked</span></li>
+          <li><b data-count="0">0</b><span>photos uploaded</span></li>
+          <li><b>&lt;1.5<small>s</small></b><span>to camera</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-device" aria-hidden="true">
+        <div class="phone" data-demo>
+          <div class="phone-screen">
+            <img class="feed" data-feed alt="" src="assets/poses/p01.jpg">
+            <img class="feed feed--next" data-feed-next alt="" src="assets/poses/p04.jpg">
+            <div class="pose-frame">
+              <img class="lines" data-lines alt="" src="assets/lines/p01.png">
+              <div class="lines-sweep"></div>
+            </div>
+            <div class="topbar">
+              <span class="chip" data-pose-name>Wind dancer</span>
+              <span class="chip chip--mode" data-mode>Lines</span>
+            </div>
+            <div class="tip" data-tip>Raise both arms overhead and hold one wrist.</div>
+            <div class="zoom"><span>0.5</span><span class="on">1x</span><span>2</span><span>3</span></div>
+            <div class="shutter-area">
+              <div class="thumb" data-thumb></div>
+              <div class="ring" data-ring>
+                <svg viewBox="0 0 100 100">
+                  <circle class="ring-track" cx="50" cy="50" r="44"/>
+                  <circle class="ring-fill" data-ring-fill cx="50" cy="50" r="44"/>
+                </svg>
+                <div class="shutter"><span class="score" data-score>0</span><span class="pct">%</span></div>
+              </div>
+              <div class="flip"></div>
+            </div>
+            <div class="toast" data-toast>Saved to Photos</div>
+            <div class="flash" data-flash></div>
+          </div>
+          <div class="phone-glow"></div>
+        </div>
+        <div class="float float--a"><span class="k">match</span><b data-float-score>0%</b></div>
+        <div class="float float--b"><span class="k">Vision</span><b>on-device</b></div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <section class="marquee-wrap" aria-label="Pose gallery">
+      <p class="marquee-label reveal">Curated poses, shot for real. Every one with a clean line guide and four short tips.</p>
+      <div class="marquee" data-marquee>
+        <div class="marquee-track">
+          <figure class="card" data-tilt><img src="assets/poses/p01.jpg" alt="Wind dancer"><img class="card-lines" src="assets/lines/p01.png" alt=""><figcaption>Wind dancer</figcaption></figure>
+          <figure class="card" data-tilt><img src="assets/poses/p02.jpg" alt="Walk away"><img class="card-lines" src="assets/lines/p02.png" alt=""><figcaption>Walk away</figcaption></figure>
+          <figure class="card" data-tilt><img src="assets/poses/p03.jpg" alt="Step lounge"><img class="card-lines" src="assets/lines/p03.png" alt=""><figcaption>Step lounge</figcaption></figure>
+          <figure class="card" data-tilt><img src="assets/poses/p04.jpg" alt="Ledge lean"><img class="card-lines" src="assets/lines/p04.png" alt=""><figcaption>Ledge lean</figcaption></figure>
+          <figure class="card" data-tilt><img src="assets/poses/p05.jpg" alt="Stair glance"><img class="card-lines" src="assets/lines/p05.png" alt=""><figcaption>Stair glance</figcaption></figure>
+          <figure class="card" data-tilt><img src="assets/poses/p06.jpg" alt="Bloom lean"><img class="card-lines" src="assets/lines/p06.png" alt=""><figcaption>Bloom lean</figcaption></figure>
+          <figure class="card" data-tilt><img src="assets/poses/p07.jpg" alt="Shy smile"><img class="card-lines" src="assets/lines/p07.png" alt=""><figcaption>Shy smile</figcaption></figure>
+          <figure class="card" data-tilt><img src="assets/poses/p08.jpg" alt="Hair frame"><img class="card-lines" src="assets/lines/p08.png" alt=""><figcaption>Hair frame</figcaption></figure>
+          <figure class="card" data-tilt><img src="assets/poses/p09.jpg" alt="Shoreline rest"><img class="card-lines" src="assets/lines/p09.png" alt=""><figcaption>Shoreline rest</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section how" id="how">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="dot"></span>How it works</p>
+        <h2 class="h2">Three taps between <em>“how should I stand?”</em> and a photo you both like.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal" style="--d:0s">
+          <div class="step-art">
+            <div class="grid-mini">
+              <span></span><span></span><span></span><span class="pick"></span><span></span><span></span>
+            </div>
+          </div>
+          <span class="step-n">01</span>
+          <h3>Pick a pose</h3>
+          <p>Browse by category or search a vibe. Favourite the ones you’ll use again. Poses Free ships inside the app, so it works with no signal.</p>
+        </li>
+        <li class="step reveal" style="--d:.12s">
+          <div class="step-art">
+            <div class="overlay-mini">
+              <img src="assets/poses/p05.jpg" alt="">
+              <img class="ol" src="assets/lines/p05.png" alt="">
+              <span class="say">“step left, hand in pocket”</span>
+            </div>
+          </div>
+          <span class="step-n">02</span>
+          <h3>Line them up</h3>
+          <p>The pose sits over your viewfinder as a photo or a line drawing. Read the tip, say it out loud, watch the ring climb as they move.</p>
+        </li>
+        <li class="step reveal" style="--d:.24s">
+          <div class="step-art">
+            <div class="ring-mini" data-ring-mini>
+              <svg viewBox="0 0 100 100"><circle class="t" cx="50" cy="50" r="42"/><circle class="f" cx="50" cy="50" r="42"/></svg>
+              <b>92<small>%</small></b>
+            </div>
+          </div>
+          <span class="step-n">03</span>
+          <h3>Green means go</h3>
+          <p>At 80% the ring turns green and the phone taps your palm. Press the shutter, or the volume button. The saved photo is the real one, untouched.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ MATCH SCROLL ============ -->
+    <section class="section match" id="match" data-match>
+      <div class="match-sticky">
+        <div class="match-ring" data-match-ring>
+          <svg viewBox="0 0 200 200">
+            <circle class="t" cx="100" cy="100" r="88"/>
+            <circle class="f" data-match-fill cx="100" cy="100" r="88"/>
+          </svg>
+          <div class="match-num"><b data-match-num>0</b><span>%</span></div>
+          <p class="match-state" data-match-state>Keep going</p>
+        </div>
+        <div class="match-copy">
+          <p class="eyebrow"><span class="dot"></span>Honest feedback</p>
+          <h2 class="h2">A number, not a vibe.</h2>
+          <p class="lede">Apple Vision tracks 19 body joints on the phone, thirty times a second. POZE compares limb angles against the reference, ignores where you stand and how tall you are, and shows one score you can act on.</p>
+          <ul class="ticks">
+            <li data-at="20">Red to yellow: the big shapes are there</li>
+            <li data-at="55">Yellow: fix the arms and the head</li>
+            <li data-at="80">Green: hold it, shoot</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES BENTO ============ -->
+    <section class="section features" id="features">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="dot"></span>Built for the person holding the phone</p>
+        <h2 class="h2">Small details that make a <em>shaky friend</em> a steady photographer.</h2>
+      </div>
+      <div class="bento">
+        <article class="tile tile--wide reveal" style="--d:0s">
+          <div class="tile-art art-overlay">
+            <img src="assets/poses/p06.jpg" alt="">
+            <img class="ol" src="assets/lines/p06.png" alt="">
+            <div class="seg"><span class="a">Photo</span><span class="b">Lines</span><i></i></div>
+          </div>
+          <h3>Photo or lines</h3>
+          <p>Flip between the full reference photo and a clean silhouette. Drag the opacity until it feels right. Pinch to resize the frame.</p>
+        </article>
+        <article class="tile reveal" style="--d:0.08s">
+          <div class="tile-art art-lock">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect class="body" x="14" y="28" width="36" height="28" rx="8"/><path class="shackle" d="M22 28v-7a10 10 0 0 1 20 0v7"/><circle class="key" cx="32" cy="42" r="4"/></svg>
+          </div>
+          <h3>Private by design</h3>
+          <p>No account. No tracking. Frames never leave the device. The photo you save is the photo the camera took.</p>
+        </article>
+        <article class="tile reveal" style="--d:0.16s">
+          <div class="tile-art art-timer"><span>3</span><span>2</span><span>1</span><span class="go">Go</span></div>
+          <h3>Self-timer</h3>
+          <p>3 or 10 seconds. Set the pose, run into the frame, let the ring tell everyone when to freeze.</p>
+        </article>
+        <article class="tile tile--wide reveal" style="--d:0.24s">
+          <div class="tile-art art-offline">
+            <div class="cloud"><svg viewBox="0 0 64 40"><path d="M18 36h30a10 10 0 0 0 1-20A14 14 0 0 0 22 12a11 11 0 0 0-4 24z"/><path class="slash" d="M10 4l44 32"/></svg></div>
+            <div class="bars"><i></i><i></i><i></i><i></i></div>
+          </div>
+          <h3>Works on a mountain</h3>
+          <p>Poses Free lives inside the app. Open POZE in airplane mode and everything, including the live score, still works. Premium packs download once and stay.</p>
+        </article>
+        <article class="tile tile--wide reveal" style="--d:0.32s">
+          <div class="tile-art art-zoom">
+            <img src="assets/poses/p03.jpg" alt="">
+            <div class="zpill"><i></i><span>0.5</span><span>1x</span><span>2</span><span>3</span></div>
+          </div>
+          <h3>Frame it like the reference</h3>
+          <p>Zoom presets from 0.5x to 3x, a 3×3 grid, flash, and tap-to-focus. Everything a camera app has, with the pose on top.</p>
+        </article>
+        <article class="tile reveal" style="--d:0.4s">
+          <div class="tile-art art-haptic"><i></i><i></i><i></i><b></b></div>
+          <h3>Feel it click</h3>
+          <p>A light tap when the ring goes green. A firmer one on capture. Your eyes stay on the subject.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PACKS ============ -->
+    <section class="section packs" id="packs">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="dot"></span>Pose packs</p>
+        <h2 class="h2">Start free. Add packs when you want more looks.</h2>
+      </div>
+      <div class="pack-grid">
+        <article class="pack reveal" style="--d:0s">
+          <div class="pack-cover"><img src="assets/poses/p01.jpg" alt=""><img src="assets/poses/p07.jpg" alt=""><img src="assets/poses/p09.jpg" alt=""></div>
+          <h3>Poses Free</h3>
+          <p>20+ poses across portrait, full body, sitting, travel and creative. Free, forever, offline.</p>
+          <span class="price">Included</span>
+        </article>
+        <article class="pack reveal" style="--d:.08s">
+          <div class="pack-cover pack-cover--tint"><span>1</span></div>
+          <h3>Poses 1 · 2 · 3</h3>
+          <p>Themed packs curated and shot by the POZE team. One-time purchase, restores on any of your devices.</p>
+          <span class="price">One-time</span>
+        </article>
+        <article class="pack pack--all reveal" style="--d:.16s">
+          <div class="pack-cover pack-cover--all"><span>∞</span></div>
+          <h3>All Access</h3>
+          <p>Every pack we have, and every pack we add. Best value if you shoot a lot.</p>
+          <span class="price">One-time</span>
+        </article>
+      </div>
+      <p class="gift reveal">Have a gift code? Open Settings, tap <b>Redeem gift code</b>, and the pack unlocks on the spot.</p>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="dot"></span>Questions</p>
+        <h2 class="h2">Short answers.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="reveal">
+          <summary>Does POZE edit or generate photos?<i></i></summary>
+          <p>No. POZE guides a real person into a real pose. The file in your library is exactly what the camera captured. You can optionally save a second copy with the guide drawn on it.</p>
+        </details>
+        <details class="reveal" style="--d:.06s">
+          <summary>Do my photos leave the phone?<i></i></summary>
+          <p>Never. Body tracking runs with Apple Vision on the device. The network is only used to download pose packs, for App Store purchases, and for gift-code unlocks.</p>
+        </details>
+        <details class="reveal" style="--d:.12s">
+          <summary>Do I need an account?<i></i></summary>
+          <p>No. There is no sign-in screen. Purchases are tied to your Apple ID and restore from the App Store.</p>
+        </details>
+        <details class="reveal" style="--d:.18s">
+          <summary>Which iPhones are supported?<i></i></summary>
+          <p>Any iPhone on iOS 17 or later. Newer phones track a little faster and offer more zoom presets.</p>
+        </details>
+        <details class="reveal" style="--d:.24s">
+          <summary>Is there an Android version?<i></i></summary>
+          <p>Not yet. POZE is iPhone-first. Tell us you want it and we will count the votes.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="section get" id="get">
+      <div class="get-inner reveal">
+        <div class="wordmark wordmark--xl" aria-label="POZE"><span>P</span><span>O</span><svg class="zmark" viewBox="28.5 19 64.5 72.5" aria-hidden="true"><path class="zz" d="M34 44H80L40 86H86"/><circle class="zh" cx="84" cy="28" r="9"/></svg><span>E</span></div>
+        <h2 class="h2">Be the friend who takes <em>good</em> photos.</h2>
+        <p class="lede">POZE is in final testing. Leave your email and we’ll send one message when it is live on the App Store. Nothing else.</p>
+        <form class="notify" action="mailto:feedback@getpoze.com" method="get" data-notify>
+          <input type="hidden" name="subject" value="Notify me when POZE launches">
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="body" type="email" placeholder="you@example.com" required autocomplete="email">
+          <button class="btn btn--accent" type="submit" data-magnet>Notify me</button>
+        </form>
+        <p class="tiny">Or write to <a href="mailto:feedback@getpoze.com?subject=POZE%20feedback">feedback@getpoze.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="wordmark wordmark--sm"><span>P</span><span>O</span><svg class="zmark" viewBox="28.5 19 64.5 72.5" aria-hidden="true"><path class="zz" d="M34 44H80L40 86H86"/><circle class="zh" cx="84" cy="28" r="9"/></svg><span>E</span></span>
+      <nav aria-label="Legal">
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="mailto:feedback@getpoze.com?subject=POZE%20feedback">Send feedback</a>
+      </nav>
+      <p>© 2026 POZE. Pose guide camera for iPhone.</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

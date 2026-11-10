@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — POZE</title>
+  <meta name="description" content="How POZE handles your data. Short version: your photos never leave your phone.">
+  <meta name="theme-color" content="#0B0B0C">
+  <link rel="canonical" href="https://getpoze.com/privacy/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="nav is-stuck">
+    <a class="nav-brand" href="/" aria-label="POZE home">
+      <span class="wordmark wordmark--sm"><span>P</span><span>O</span><svg class="zmark" viewBox="28.5 19 64.5 72.5" aria-hidden="true"><path class="zz" d="M34 44H80L40 86H86"/><circle class="zh" cx="84" cy="28" r="9"/></svg><span>E</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Legal">
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+    </nav>
+    <a class="btn btn--sm btn--ghost" href="/">Back to site</a>
+  </header>
+
+  <main class="legal">
+    <p class="eyebrow"><span class="dot"></span>Privacy Policy</p>
+    <h1>Your photos never leave your phone.</h1>
+    <p class="meta">Effective 10 November 2026 · Applies to the POZE app for iOS and to getpoze.com</p>
+
+    <p class="summary">
+      <b>Short version.</b> POZE runs the camera and the pose matching on your device. We do not receive your photos, your video, or your camera frames. There is no account and no advertising tracking. The only data that reaches a server is what is needed to deliver pose packs and to unlock purchases, and it is tied to a random anonymous identifier, not to you.
+    </p>
+
+    <h2>1. Who we are</h2>
+    <p>POZE is an independent app published by its author. Contact: <a href="mailto:feedback@getpoze.com">feedback@getpoze.com</a>.</p>
+
+    <h2>2. What stays on your device</h2>
+    <ul>
+      <li><b>Camera frames.</b> The live viewfinder is processed on the device with Apple’s Vision framework to estimate body joints. Frames are never stored by POZE and never transmitted.</li>
+      <li><b>Photos you take.</b> Photos are saved to your Photos library through Apple’s standard photo API. POZE does not upload them or keep a copy.</li>
+      <li><b>Settings and favourites.</b> Overlay mode, opacity, grid, haptics, self-timer, and favourite poses are stored locally on the device.</li>
+    </ul>
+
+    <h2>3. Data that reaches a server</h2>
+    <table>
+      <tr><th>Data</th><th>Why</th><th>Who processes it</th></tr>
+      <tr><td>Anonymous identifier (a random ID created by Firebase Anonymous Authentication)</td><td>To record which pose packs are unlocked on this installation and to validate gift codes</td><td>Google Firebase (Authentication, Firestore, Cloud Functions, Storage) on our behalf</td></tr>
+      <tr><td>Pose pack download requests (standard connection data such as IP address, handled like any file download)</td><td>To deliver pose packs</td><td>Google Firebase Storage</td></tr>
+      <tr><td>Gift code you enter</td><td>To unlock the packs the code grants. The code is validated server-side and is not linked to any personal data.</td><td>Google Firebase Cloud Functions</td></tr>
+      <tr><td>In-app purchases</td><td>To sell and restore pose packs</td><td>Apple (App Store, StoreKit). We never see your payment details.</td></tr>
+    </table>
+    <p>The anonymous identifier is not linked to your name, email, Apple ID, or contacts. If you delete the app, the identifier is deleted with it, and a new one is created on the next install.</p>
+
+    <h2>4. Analytics</h2>
+    <p>POZE may send a minimal set of anonymous usage events (for example “app opened”, “photo captured”, “paywall shown”, “purchase completed”) through a privacy-first analytics provider. These events contain no photos, no personal data, and no gift code values. They cannot be used to identify you. POZE does not use the Advertising Identifier (IDFA) and does not show an App Tracking Transparency prompt because it does not track you.</p>
+
+    <h2>5. Permissions</h2>
+    <ul>
+      <li><b>Camera.</b> Required to show the viewfinder and to estimate the pose. POZE does not work without it.</li>
+      <li><b>Photos (add only).</b> Used to save the photos you take. POZE does not read your existing library.</li>
+    </ul>
+
+    <h2>6. Children</h2>
+    <p>POZE is not directed at children under 13, and we do not knowingly collect personal data from anyone.</p>
+
+    <h2>7. Your choices</h2>
+    <ul>
+      <li>Revoke camera or photo access at any time in iOS Settings.</li>
+      <li>Delete the app to remove all local data and the anonymous identifier.</li>
+      <li>Email us to ask what, if anything, is associated with your anonymous identifier, or to have it removed.</li>
+    </ul>
+
+    <h2>8. This website</h2>
+    <p>getpoze.com is a static site hosted on GitHub Pages. We do not set cookies or run analytics on it. GitHub may log standard connection data as described in <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub’s privacy statement</a>.</p>
+
+    <h2>9. Changes</h2>
+    <p>If this policy changes, we will update this page and the effective date above. Material changes will be noted in the app’s release notes.</p>
+
+    <h2>10. Contact</h2>
+    <p><a href="mailto:feedback@getpoze.com?subject=POZE%20privacy">feedback@getpoze.com</a></p>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="wordmark wordmark--sm"><span>P</span><span>O</span><svg class="zmark" viewBox="28.5 19 64.5 72.5" aria-hidden="true"><path class="zz" d="M34 44H80L40 86H86"/><circle class="zh" cx="84" cy="28" r="9"/></svg><span>E</span></span>
+      <nav aria-label="Legal">
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="mailto:feedback@getpoze.com?subject=POZE%20feedback">Send feedback</a>
+      </nav>
+      <p>© 2026 POZE</p>
+    </div>
+  </footer>
+</body>
+</html>
