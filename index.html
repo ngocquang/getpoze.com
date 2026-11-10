@@ -68,18 +68,29 @@
           <div class="phone-screen">
             <img class="feed" data-feed alt="" src="assets/poses/p01.jpg">
             <img class="feed feed--next" data-feed-next alt="" src="assets/poses/p04.jpg">
-            <div class="pose-frame">
+            <div class="guide">
               <img class="lines" data-lines alt="" src="assets/lines/p01.png">
               <div class="lines-sweep"></div>
             </div>
             <div class="topbar">
-              <span class="chip" data-pose-name>Wind dancer</span>
-              <span class="chip chip--mode" data-mode>Lines</span>
+              <span class="cb"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+              <span class="aspect">4:3</span>
+              <span class="cb"><svg viewBox="0 0 24 24"><path d="M4 11a8 8 0 0 1 14-4l2 2M20 13a8 8 0 0 1-14 4l-2-2M20 4v5h-5M4 20v-5h5"/></svg></span>
+            </div>
+            <div class="side">
+              <span class="cb"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12zM12 9.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg></span>
+              <span class="cb"><svg viewBox="0 0 24 24"><path d="M12 3v18M9 7 3 17h6zM15 7l6 10h-6z"/></svg></span>
+              <span class="cb"><svg viewBox="0 0 24 24"><path d="M12 11v6M12 7.5v.01"/></svg></span>
+              <span class="cb"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span>
             </div>
             <div class="tip" data-tip>Raise both arms overhead and hold one wrist.</div>
-            <div class="zoom"><span>0.5</span><span class="on">1x</span><span>2</span><span>3</span></div>
+            <div class="zoom"><span>.5</span><span class="on">1x</span><span>2</span><span>5</span></div>
+            <div class="strip" data-strip><span class="cat">All</span><img data-pose="p01" src="assets/poses/p01.jpg" alt=""><img data-pose="p04" src="assets/poses/p04.jpg" alt=""><img data-pose="p08" src="assets/poses/p08.jpg" alt=""><img data-pose="p05" src="assets/poses/p05.jpg" alt=""><img data-pose="p02" src="assets/poses/p02.jpg" alt=""></div>
             <div class="shutter-area">
-              <div class="thumb" data-thumb></div>
+              <div class="shutter-side">
+                <span class="cb"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+                <div class="thumb" data-thumb></div>
+              </div>
               <div class="ring" data-ring>
                 <svg viewBox="0 0 100 100">
                   <circle class="ring-track" cx="50" cy="50" r="44"/>
@@ -87,7 +98,10 @@
                 </svg>
                 <div class="shutter"><span class="score" data-score>0</span><span class="pct">%</span></div>
               </div>
-              <div class="flip"></div>
+              <div class="shutter-side">
+                <span class="cb cb--on"><svg viewBox="0 0 24 24"><path d="M12 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM12 9v6M8 11h8M12 15l-3 6M12 15l3 6"/></svg></span>
+                <span class="cb"><svg viewBox="0 0 24 24"><path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></span>
+              </div>
             </div>
             <div class="toast" data-toast>Saved to Photos</div>
             <div class="flash" data-flash></div>
@@ -211,7 +225,7 @@
             <div class="seg"><span class="a">Photo</span><span class="b">Lines</span><i></i></div>
           </div>
           <h3>Photo or lines</h3>
-          <p>Flip between the full reference photo and a clean silhouette. Drag the opacity until it feels right. Pinch to resize the frame.</p>
+          <p>Flip between the full reference photo and a clean silhouette. The guide fills the viewfinder and stays put. Pinch zooms the camera.</p>
         </article>
         <article class="tile reveal" style="--d:0.08s">
           <div class="tile-art art-lock">

@@ -117,16 +117,16 @@
 
   /* hero demo loop: pose appears, score climbs, ring goes green, shutter fires, next pose */
   const POSES = [
-    { id: 'p01', name: 'Wind dancer', tip: 'Raise both arms overhead and hold one wrist.', peak: 92 },
-    { id: 'p04', name: 'Ledge lean', tip: 'Lean your weight onto one arm.', peak: 88 },
-    { id: 'p08', name: 'Hair frame', tip: 'Lift one arm over your head.', peak: 95 },
-    { id: 'p05', name: 'Stair glance', tip: 'Look back over your shoulder at the lens.', peak: 90 },
+    { id: 'p01', tip: 'Raise both arms overhead and hold one wrist.', peak: 92 },
+    { id: 'p04', tip: 'Lean your weight onto one arm.', peak: 88 },
+    { id: 'p08', tip: 'Lift one arm over your head.', peak: 95 },
+    { id: 'p05', tip: 'Look back over your shoulder at the lens.', peak: 90 },
   ];
   const CIRC = 276.46;
   const tier = (s) => s >= 80 ? 'is-green' : s >= 50 ? 'is-yellow' : s >= 20 ? 'is-red' : '';
   if (phone) {
     const feed = $('[data-feed]', phone), feedNext = $('[data-feed-next]', phone), lines = $('[data-lines]', phone);
-    const name = $('[data-pose-name]', phone), tip = $('[data-tip]', phone);
+    const tip = $('[data-tip]', phone), stripThumbs = phone.querySelectorAll('[data-strip] img');
     const ring = $('[data-ring]', phone), fill = $('[data-ring-fill]', phone), score = $('[data-score]', phone);
     const thumb = $('[data-thumb]', phone), toast = $('[data-toast]', phone), flash = $('[data-flash]', phone);
     const floatScore = $('[data-float-score]');
@@ -135,6 +135,7 @@
     const setScore = (s) => {
       const v = Math.round(s);
       score.textContent = v;
+      if (!reduce) phone.style.setProperty('--miss', 1 - v / 100);
       if (floatScore) floatScore.textContent = v + '%';
       fill.style.strokeDashoffset = CIRC * (1 - v / 100);
       const t = tier(v);
@@ -155,7 +156,7 @@
     });
 
     const show = (pose, first) => {
-      name.textContent = pose.name;
+      stripThumbs.forEach((el) => el.classList.toggle('on', el.dataset.pose === pose.id));
       tip.textContent = pose.tip;
       tip.classList.remove('hide');
       lines.src = `assets/lines/${pose.id}.png`;
@@ -183,6 +184,7 @@
         toast.classList.add('show');
         await wait(1500);
         toast.classList.remove('show');
+        setScore(0);
         i = (i + 1) % POSES.length;
         const next = POSES[i];
         feedNext.src = `assets/poses/${next.id}.jpg`;
