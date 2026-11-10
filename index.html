@@ -35,7 +35,7 @@
       <a href="#packs">Packs</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn--sm btn--accent" href="#get" data-magnet>Get the app</a>
+    <a class="btn btn--sm btn--accent" href="#get" data-store data-magnet>Get POZE</a>
   </header>
 
   <main id="top">
@@ -50,17 +50,16 @@
         </h1>
         <p class="lede reveal" style="--d:.55s">POZE lays a reference pose over your viewfinder and tells you, live, how close your subject is. The ring turns green. You tap the shutter. No retakes, no “just stand natural”.</p>
         <div class="cta-row reveal" style="--d:.7s">
-          <a class="btn btn--accent btn--lg" href="#get" data-magnet>
+          <a class="btn btn--accent btn--lg" href="#get" data-store data-magnet>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 12.9c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.8 1.3 10.3.9 1.3 1.9 2.7 3.3 2.6 1.3-.1 1.8-.8 3.4-.8s2 .8 3.4.8c1.4 0 2.3-1.3 3.2-2.6 1-1.5 1.4-2.9 1.4-3-.1 0-2.9-1.1-3-4zM14 5.3c.7-.9 1.2-2.1 1.1-3.3-1 0-2.3.7-3 1.6-.7.8-1.3 2-1.1 3.2 1.1.1 2.3-.6 3-1.5z"/></svg>
-            Coming soon on the App Store
+            <span data-store-label>Download free</span>
           </a>
-          <a class="btn btn--ghost btn--lg" href="#how">See how it works</a>
+          <a class="btn btn--ghost btn--lg" href="#how">Watch it work</a>
         </div>
-        <ul class="stats reveal" style="--d:.9s" aria-label="Key facts">
-          <li><b data-count="100" data-suffix="%">0%</b><span>on-device</span></li>
-          <li><b data-count="19">0</b><span>joints tracked</span></li>
-          <li><b data-count="0">0</b><span>photos uploaded</span></li>
-          <li><b>&lt;1.5<small>s</small></b><span>to camera</span></li>
+        <ul class="trust reveal" style="--d:.85s" aria-label="Why it is safe to try">
+          <li>Free pack included</li>
+          <li>No account</li>
+          <li>Works offline</li>
         </ul>
       </div>
 
@@ -98,6 +97,12 @@
         <div class="float float--a"><span class="k">match</span><b data-float-score>0%</b></div>
         <div class="float float--b"><span class="k">Vision</span><b>on-device</b></div>
       </div>
+      <ul class="stats reveal" style="--d:.2s" aria-label="Key facts">
+        <li><b data-count="100" data-suffix="%">0%</b><span>on-device</span></li>
+        <li><b data-count="19">0</b><span>joints tracked</span></li>
+        <li><b data-count="0">0</b><span>photos uploaded</span></li>
+        <li><b>&lt;1.5<small>s</small></b><span>to camera</span></li>
+      </ul>
     </section>
 
     <!-- ============ MARQUEE ============ -->
@@ -159,6 +164,13 @@
           <p>At 80% the ring turns green and the phone taps your palm. Press the shutter, or the volume button. The saved photo is the real one, untouched.</p>
         </li>
       </ol>
+      <div class="band reveal">
+        <div>
+          <h3>Try it on your next photo.</h3>
+          <p>Free pack of 20+ poses. No sign-up. Open the camera and point.</p>
+        </div>
+        <a class="btn btn--accent btn--lg" href="#get" data-store data-magnet><span data-store-label>Download free</span></a>
+      </div>
     </section>
 
     <!-- ============ MATCH SCROLL ============ -->
@@ -248,7 +260,7 @@
           <div class="pack-cover"><img src="assets/poses/p01.jpg" alt=""><img src="assets/poses/p07.jpg" alt=""><img src="assets/poses/p09.jpg" alt=""></div>
           <h3>Poses Free</h3>
           <p>20+ poses across portrait, full body, sitting, travel and creative. Free, forever, offline.</p>
-          <span class="price">Included</span>
+          <span class="price">Free</span>
         </article>
         <article class="pack reveal" style="--d:.08s">
           <div class="pack-cover pack-cover--tint"><span>1</span></div>
@@ -257,13 +269,17 @@
           <span class="price">One-time</span>
         </article>
         <article class="pack pack--all reveal" style="--d:.16s">
+          <span class="badge">Best value</span>
           <div class="pack-cover pack-cover--all"><span>∞</span></div>
           <h3>All Access</h3>
           <p>Every pack we have, and every pack we add. Best value if you shoot a lot.</p>
           <span class="price">One-time</span>
         </article>
       </div>
-      <p class="gift reveal">Have a gift code? Open Settings, tap <b>Redeem gift code</b>, and the pack unlocks on the spot.</p>
+      <div class="packs-cta reveal">
+        <a class="btn btn--accent btn--lg" href="#get" data-store data-magnet><span data-store-label>Start with the free pack</span></a>
+        <p class="gift">Have a gift code? Open Settings, tap <b>Redeem gift code</b>, and the pack unlocks on the spot.</p>
+      </div>
     </section>
 
     <!-- ============ FAQ ============ -->
@@ -300,18 +316,37 @@
     <section class="section get" id="get">
       <div class="get-inner reveal">
         <div class="wordmark wordmark--xl" aria-label="POZE"><span>P</span><span>O</span><svg class="zmark" viewBox="28.5 19 64.5 72.5" aria-hidden="true"><path class="zz" d="M34 44H80L40 86H86"/><circle class="zh" cx="84" cy="28" r="9"/></svg><span>E</span></div>
-        <h2 class="h2">Be the friend who takes <em>good</em> photos.</h2>
-        <p class="lede">POZE is in final testing. Leave your email and we’ll send one message when it is live on the App Store. Nothing else.</p>
-        <form class="notify" action="mailto:feedback@getpoze.com" method="get" data-notify>
-          <input type="hidden" name="subject" value="Notify me when POZE launches">
-          <label class="sr-only" for="email">Email</label>
-          <input id="email" name="body" type="email" placeholder="you@example.com" required autocomplete="email">
-          <button class="btn btn--accent" type="submit" data-magnet>Notify me</button>
-        </form>
-        <p class="tiny">Or write to <a href="mailto:feedback@getpoze.com?subject=POZE%20feedback">feedback@getpoze.com</a>.</p>
+        <h2 class="h2">Stop taking twenty photos to get <em>one</em>.</h2>
+        <p class="lede">Open POZE, pick a pose, wait for green. The free pack is yours forever. Add packs only when you want more looks.</p>
+        <div class="get-live">
+          <a class="btn btn--accent btn--xl" href="#get" data-store data-magnet>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 12.9c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.8 1.3 10.3.9 1.3 1.9 2.7 3.3 2.6 1.3-.1 1.8-.8 3.4-.8s2 .8 3.4.8c1.4 0 2.3-1.3 3.2-2.6 1-1.5 1.4-2.9 1.4-3-.1 0-2.9-1.1-3-4zM14 5.3c.7-.9 1.2-2.1 1.1-3.3-1 0-2.3.7-3 1.6-.7.8-1.3 2-1.1 3.2 1.1.1 2.3-.6 3-1.5z"/></svg>
+            Download free on the App Store
+          </a>
+          <ul class="trust" aria-label="Why it is safe to try">
+            <li>Free pack included</li>
+            <li>No account</li>
+            <li>iPhone, iOS 17+</li>
+          </ul>
+        </div>
+        <div class="get-prelaunch">
+          <p class="prelaunch-note">POZE is in final testing. Leave your email and we’ll send one message when it is live. Nothing else.</p>
+          <form class="notify" action="mailto:feedback@getpoze.com" method="get" data-notify>
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="body" type="email" placeholder="you@example.com" required autocomplete="email">
+            <button class="btn btn--accent" type="submit" data-magnet>Get early access</button>
+          </form>
+        </div>
+        <p class="tiny">Questions? <a href="mailto:feedback@getpoze.com?subject=POZE%20feedback">feedback@getpoze.com</a></p>
       </div>
     </section>
   </main>
+
+  <div class="dock" data-dock aria-hidden="true">
+    <svg class="dock-mark" viewBox="28.5 19 64.5 72.5"><path d="M34 44H80L40 86H86" fill="none" stroke="#F5C542" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="84" cy="28" r="9" fill="#F5C542"/></svg>
+    <div class="dock-text"><b>POZE</b><span>Free pose guide camera</span></div>
+    <a class="btn btn--sm btn--accent" href="#get" data-store tabindex="-1"><span data-store-label>Get it</span></a>
+  </div>
 
   <footer class="footer">
     <div class="footer-inner">

@@ -1,10 +1,28 @@
 (() => {
+  const APP_STORE_URL = '';
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fine = matchMedia('(pointer: fine)').matches;
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
   const lerp = (a, b, t) => a + (b - a) * t;
+
+  /* store links: one URL, every CTA; before launch they lead to the early-access form */
+  const live = APP_STORE_URL.length > 0;
+  document.body.classList.toggle('is-prelaunch', !live);
+  $$('[data-store]').forEach((a) => {
+    if (live) { a.href = APP_STORE_URL; a.target = '_blank'; a.rel = 'noopener'; }
+    else { a.href = '#get'; const l = $('[data-store-label]', a); if (l) l.textContent = 'Get early access'; }
+  });
+
+  /* mobile dock: show after the hero, hide while the final CTA is on screen */
+  const dock = $('[data-dock]');
+  if (dock) {
+    let pastHero = false, atGet = false;
+    const apply = () => dock.classList.toggle('show', pastHero && !atGet);
+    new IntersectionObserver((en) => { pastHero = !en[0].isIntersecting && en[0].boundingClientRect.top < 0; apply(); }, { threshold: 0 }).observe($('.hero'));
+    new IntersectionObserver((en) => { atGet = en[0].isIntersecting; apply(); }, { threshold: .15 }).observe($('#get'));
+  }
 
   /* nav */
   const nav = $('[data-nav]');
@@ -228,8 +246,8 @@
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const email = $('#email', form).value.trim();
-      const subject = encodeURIComponent('Notify me when POZE launches');
-      const body = encodeURIComponent(`Please notify ${email} when POZE is live on the App Store.`);
+      const subject = encodeURIComponent('POZE early access');
+      const body = encodeURIComponent(`Please add ${email} to the POZE early-access list.`);
       location.href = `mailto:feedback@getpoze.com?subject=${subject}&body=${body}`;
     });
   }
